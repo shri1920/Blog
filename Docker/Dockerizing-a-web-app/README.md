@@ -41,7 +41,7 @@ Open the html file in your favourite editor and write some content.
 </body>
 </html>
 ```
-Create directory to hold nginx config to serve static html page.
+Create directory to hold the nginx config to serve static html page.
 ```sh
 mkdir conf && cd conf
 ```
@@ -70,32 +70,32 @@ Copy the static html file to desired location inside the Docker image.
 ```sh
 COPY html/index.html /usr/share/nginx/html
 ```
-Copy the nginx confiuration to desired location inside the Docker image.
+Copy the nginx configuration to appropriate location inside the Docker image.
 ```sh
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 ```
-The final Dockerfile looks as bellow.
+The final Dockerfile looks as below.
 ```sh
 FROM nginx:alpine
 COPY html/index.html /usr/share/nginx/html
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 ```
-Building the docker image: run the bellow cmd to Create the docker image
+Building the docker image: run the below command to Create the docker image.
 ```sh
 cd /path/to/Dockerizing-a-web-app
 docker build -t shri1920/sample-web-app .
 ```
-Checking the docker image: Use the bellow command to list the docker images.
+Checking the docker image: Use the below command to list the docker images.
 ```sh
 docker images
 ```
-Starting the docker container: Use the bellow command to start the docker container.
+Starting the docker container: Use the below command to start the docker container.
 ```sh
 docker run --name sample-web-app -d -p 8085:80 -t shri1920/sample-web-app
 ```
 Listing the Docker containers.
 ```sh
 docker ps (To list Docker containers)
-docker ps -a (To list stopped or exited containers)
+docker ps -a (To list all Docker containers, including stops or exited containers)
 ```
-To test the app, open the browser hit localhost:port-no (localhost:8085). Now you should be able to see the content of web app.
+To test the app, open the browser and hit localhost:port-no (localhost:8085). Now you should be able to see the content of web app.
