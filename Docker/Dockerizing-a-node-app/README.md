@@ -90,16 +90,16 @@ RUN        cd /opt/source; npm install .
 WORKDIR    /opt/source
 ENTRYPOINT ["node", "/opt/source/main.js"]
 ```
-Building the docker image: run the below command to create the docker image.
+Building the Docker image: run the below command to create the Docker image.
 ```sh
 cd /path/to/Dockerizing-a-node-app
 docker build -t shri1920/sample-node-app .
 ```
-Checking the docker image: Use the below command to list the docker images.
+Checking the Docker image: Use the below command to list the Docker images.
 ```sh
 docker images
 ```
-Starting the docker container: Use the below command to start the docker container.
+Starting the Docker container: Use the below command to start the Docker container.
 ```sh
 docker run --name sample-node-app -d -p 3000:3000 -t shri1920/sample-node-app
 ```
@@ -108,4 +108,4 @@ Listing the Docker containers.
 docker ps (To list Docker containers)
 docker ps -a (To list all Docker containers, including stops or exited containers)
 ```
-To test the app, open the browser and hit localhost:port-no (localhost:3000). Now you should be able to see the response of the NodeJs service you created.
+To test the app, open the browser and hit localhost:port-no (localhost:3000). Now you should be able to see the response of the Node.js service you created.
