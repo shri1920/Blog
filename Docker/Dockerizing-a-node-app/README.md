@@ -1,6 +1,6 @@
-### The example demonstrate How to Dockerize a NodeJS application.
+### The example demonstrate How to Dockerize a Node.js application.
 
-Let's first create a sample NodeJS HelloWorld application.Then we will create a Docker image for our NodeJS application.
+Let's first create a sample Node.js (HelloWorld) application.Then we will create a Docker image for our Node.js application.
 
 Directory structure of the application.
 ```sh
@@ -39,7 +39,7 @@ Create a package.json file which describes your application.
     }
 }
 ```
-Create a file (main.js) that defines the NodeJs app.
+Create a file (main.js) that defines the Node.js app.
 ```sh
 const express = require('express'),
       app     = express();
@@ -61,11 +61,11 @@ Open the Dockerfile with your favourite editor. Define the base Docker image.
 ```sh
 FROM       nodesource/node:4.0
 ```
-Create directory to hold NodeJS application code inside the Docker image.
+Create directory to hold Node.js application code in the Docker image.
 ```sh
 RUN        mkdir /opt/source
 ```
-Copy the NodeJS application code to the directory created in  previous step.
+Copy the Node.js application code to the directory created in the previous step.
 ```sh
 COPY       ./source/* /opt/source/
 ```
@@ -77,7 +77,7 @@ Define the working directory of your application.
 ```sh
 WORKDIR    /opt/source
 ```
-Define the command to start the NodeJs application.
+Define the command to start the Node.js application.
 ```sh
 ENTRYPOINT ["node", "/opt/source/main.js"]
 ```
@@ -90,7 +90,7 @@ RUN        cd /opt/source; npm install .
 WORKDIR    /opt/source
 ENTRYPOINT ["node", "/opt/source/main.js"]
 ```
-Building the docker image: run the below command to Create the docker image.
+Building the docker image: run the below command to create the docker image.
 ```sh
 cd /path/to/Dockerizing-a-node-app
 docker build -t shri1920/sample-node-app .
