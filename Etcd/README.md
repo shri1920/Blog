@@ -1,7 +1,7 @@
 ## etcd
 
-etcd is a reliable distributed key value store.
-To start the single node etcd, download the etcd_docker.sh and run the script using sh etcd_docker.sh
+etcd is a reliable distributed key value store.  
+To start the single node etcd, download the etcd_docker.sh and run the script using sh etcd_docker.sh  
 **Note**: The script runs the etcd using Docker. 
 
 ### etcd API
