@@ -1,4 +1,4 @@
-## Callback, Callback hell, Promise and async await
+## Callback, Callback hell, Promise and Async/await
 
 **Callback** is a function, passed as a parameter to another function. It is a function that will be be executed after another function has finished executing.
 ````
@@ -35,7 +35,6 @@ var multiplication = function (a, b, callback) {
 		callback(mul);
 	}
 };
-
 
 var calculate = function () {
 	addition(2, 1, function (add) {
@@ -76,8 +75,6 @@ var multiplication = function (a, b) {
     });
 };
 
-
-
 addition(2, 1)
     .then(function (add) {
         console.log("addition", add);
@@ -93,4 +90,44 @@ addition(2, 1)
     .catch(function (err) {
         console.log("Error", err);
     });
+````
+**Async/await**
+````
+var addition = function (a, b) {
+    return new Promise(function (resolve, reject) {
+        var add = a + b;
+        resolve(add);
+    });
+};
+
+var subtraction = function (a, b) {
+    return new Promise(function (resolve, reject) {
+        var sub = a - b;
+        resolve(sub);
+    });
+};
+
+var multiplication = function (a, b) {
+    return new Promise(function (resolve, reject) {
+        var mul = a * b;
+        resolve(mul);
+    });
+};
+
+var calculate = async function () {
+	console.log("calling");
+  
+  	var add = await addition(2, 1);
+  	console.log("addition", add);
+  
+  	var sub = await subtraction(2, 1);
+  	console.log("subtraction", sub);
+  
+  	var mul = await multiplication(2, 1);
+  	console.log("subtraction", mul);
+  
+  	console.log("done");
+};
+
+calculate();
 ````
