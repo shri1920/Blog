@@ -1,6 +1,6 @@
 ### Components.
 
-Below code snippet shows how to create a compoenent in React.js
+Below code snippet shows how to create a component in React.js
 ````
 // Header Component
 class Header extends Component {
@@ -11,10 +11,10 @@ class Header extends Component {
   	}
 }
 ````
-The above code snippet shows how to create a compeoent with name Header. example_01 demonstrate the same.
+The above code snippet shows how to create a component with name Header. example_01 demonstrate the same.
 
 example_02 demonstrate splitting up the components.
 
 Outsource the Header component to Header.js and Footer component to Footer.js
 
-Now to use the Header and Footer component in App.js import the component in App.js from Header.js and Footer.js
+Now to use the Header and Footer component in App.js, import the component in App.js from Header.js and Footer.js

@@ -11,8 +11,8 @@ npm i create-react-app
 
 Run the below commands to create React.js app
 ```sh
-$ create-react-app gallery-app
-$ cd gallery-app
+$ create-react-app my-app
+$ cd my-app
 $ npm start
 ```
 
