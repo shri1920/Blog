@@ -5,4 +5,4 @@ Installing react-router-dom
 npm install react-router-dom --save
 ````
 
-The example_01 demonstrate the Routing.
+example_01 demonstrate the Routing.
