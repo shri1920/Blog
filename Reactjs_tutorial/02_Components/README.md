@@ -1,4 +1,4 @@
-### Components.
+### Stateless Components.
 
 Below code snippet shows how to create a component in React.js
 ````
